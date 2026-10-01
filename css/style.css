@@ -320,15 +320,13 @@ footer li img {
    RESPONSIVIDADE
 ========================= */
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
 
-    /* Trava a altura da tela no viewport do celular */
     html,
     body {
         height: 100vh;
         height: 100svh;
         overflow: hidden;
-        /* Impede a barra de rolagem */
     }
 
     body {
@@ -345,50 +343,55 @@ footer li img {
 
     .sessao-principal {
         flex: 1;
+        display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        /* Distribui o espaço proporcionalmente */
         height: 100%;
     }
 
-    /* Reduz um pouco a área do topo/logo */
+    /* Área da logo no topo */
     .logo-area {
         order: -1;
         width: 100%;
-        height: 90px;
-        min-height: 90px;
+        height: 95px;
+        min-height: 95px;
+        flex-shrink: 0;
     }
 
     .logo-area>img {
         display: block;
-        width: 120px;
+        width: 115px;
         height: auto;
     }
 
-    /* Reduz o padding e o espaçamento do conteúdo central */
+    /* Conteúdo principal */
     .conteudo-principal {
         width: 100%;
-        padding: 10px 20px;
+        padding: 15px 20px 10px;
         text-align: center;
         flex: 1;
         display: flex;
         flex-direction: column;
-        justify-content: center;
     }
 
+    /* ESPAÇAMENTO DO H1 E DOS PARÁGRAFOS */
     h1 {
         font-size: 34px;
-        margin: 0 0 10px 0;
-        /* Espaço reduzido do h1 para o p */
+        margin-top: 5px;
+        margin-bottom: 16px;
+        /* <--- Dá o respiro ideal entre o H1 e o primeiro P */
     }
 
     .conteudo-principal>p {
         font-size: 15px;
-        margin: 3px 0;
+        margin: 4px 0;
+        /* Espaçamento leve entre os parágrafos */
     }
 
+    /* Botões centralizados verticalmente no espaço livre */
     nav {
-        margin-top: 12px;
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 100%;
     }
 
     nav ul {
@@ -401,9 +404,9 @@ footer li img {
     nav li {
         width: 100%;
         max-width: 380px;
-        margin-top: 6px;
-        height: 40px;
-        padding: 0.25rem 0.5rem;
+        margin-bottom: 8px;
+        height: 42px;
+        padding: 0.35rem 0.5rem;
         grid-template-columns: 30px minmax(0, 1fr) 20px;
     }
 
@@ -420,14 +423,14 @@ footer li img {
 
     nav li img:first-child,
     nav li img:last-child {
-        width: 16px;
-        height: 16px;
+        width: 18px;
+        height: 18px;
     }
 
-    /* Ajustes para o footer enxuto no rodapé da tela */
+    /* Rodapé fixado na base */
     footer {
         flex-shrink: 0;
-        padding: 6px 0;
+        padding: 6px 0 10px;
     }
 
     footer ul {
