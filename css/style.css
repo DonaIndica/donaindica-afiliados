@@ -330,7 +330,7 @@ footer li img {
     .sessao-principal {
 
         flex-direction: column;
-        height: 100%;
+        height: auto;
     }
 
     main {
