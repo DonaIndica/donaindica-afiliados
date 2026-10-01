@@ -320,104 +320,129 @@ footer li img {
    RESPONSIVIDADE
 ========================= */
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
 
+
+    /* Trava a altura da tela no viewport do celular */
     html,
     body {
         height: 100vh;
         height: 100svh;
         overflow: hidden;
+        /* Impede a barra de rolagem */
     }
 
     body {
-        display: flex;
+        height: 100svh;
+        min-height: 100svh;
+    }
+
+    .sessao-principal {
+
         flex-direction: column;
+        height: auto;
     }
 
     main {
         flex: 1;
-        display: flex;
-        flex-direction: column;
         min-height: 0;
     }
 
-    .sessao-principal {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-    }
-
-    /* Área da logo no topo */
     .logo-area {
+
         order: -1;
-        width: 100%;
-        height: 95px;
-        min-height: 95px;
-        flex-shrink: 0;
+        min-height: 110px;
+        height: 110px;
+
     }
 
     .logo-area>img {
+
         display: block;
-        width: 115px;
+
+        width: 165px;
+
         height: auto;
+
     }
 
-    /* Conteúdo principal */
-    .conteudo-principal {
+
+    .conteudo-principal,
+
+    .logo-area {
+
         width: 100%;
-        padding: 15px 20px 10px;
-        text-align: center;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
+
     }
 
-    /* ESPAÇAMENTO DO H1 E DOS PARÁGRAFOS */
     h1 {
-        font-size: 34px;
-        margin-top: 5px;
-        margin-bottom: 16px;
-        /* <--- Dá o respiro ideal entre o H1 e o primeiro P */
+
+        font-size: 40px;
+        margin: 25px;
+    }
+
+    .conteudo-principal {
+
+        padding: 18px 20px 12px;
+
+        text-align: center;
+
     }
 
     .conteudo-principal>p {
-        font-size: 15px;
-        margin: 4px 0;
-        /* Espaçamento leve entre os parágrafos */
+
+        font-size: 16px;
+
+        margin: 6px 0;
+
     }
 
-    /* Botões centralizados verticalmente no espaço livre */
     nav {
-        margin-top: auto;
-        margin-bottom: auto;
-        width: 100%;
+
+        margin-top: 20px;
+
     }
 
     nav ul {
-        padding: 0;
+
+        padding: 5px;
+
         display: flex;
+
         flex-direction: column;
+
         align-items: center;
+
     }
 
     nav li {
+
         width: 100%;
-        max-width: 380px;
-        margin-bottom: 8px;
+
+        max-width: 400px;
+
+        margin-top: 6px;
+
         height: 42px;
+
         padding: 0.35rem 0.5rem;
         grid-template-columns: 30px minmax(0, 1fr) 20px;
     }
 
     nav li a {
+
         display: flex;
+
         justify-content: center;
+
         align-items: center;
+
         height: 100%;
         width: 100%;
+
         padding: 0;
-        font-size: 16px;
+
+        font-size: 18px;
         white-space: nowrap;
     }
 
@@ -427,40 +452,69 @@ footer li img {
         height: 18px;
     }
 
-    /* Rodapé fixado na base */
     footer {
         flex-shrink: 0;
-        padding: 6px 0 10px;
     }
 
     footer ul {
+
         gap: 6px;
+
     }
 
     footer li img {
-        width: 14px;
-        height: 14px;
+
+        width: 16px;
+
+        height: 16px;
     }
 
     footer>p {
-        font-size: 10px;
-        margin: 2px 0 0 0;
+
+        font-size: 11px;
+
+        margin: 5px;
+
         padding: 0;
+
     }
 
     footer li a {
-        font-size: 14px;
-        padding: 2px;
+
+        font-size: 16px;
+
+        padding: 5px;
+
     }
 
     .mensagem-footer p {
-        font-size: 11px;
-        margin: 2px;
+
+        font-size: 12px;
+
+        margin: 4px;
+
         padding: 0;
+
     }
 
     .mensagem-footer img {
-        width: 14px;
-        height: 14px;
+
+        width: 18px;
+
+        height: 18px;
+
     }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    nav li,
+
+    .logo-area>img {
+
+        animation: none;
+
+    }
+
 }
