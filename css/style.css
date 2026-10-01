@@ -322,6 +322,11 @@ footer li img {
 
 @media (max-width: 480px) {
 
+    body {
+        height: 100svh;
+        min-height: 100svh;
+    }
+
     .sessao-principal {
 
         flex-direction: column;
@@ -435,6 +440,10 @@ footer li img {
     nav li img:last-child {
         width: 18px;
         height: 18px;
+    }
+
+    footer {
+        flex-shrink: 0;
     }
 
     footer ul {
