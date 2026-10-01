@@ -331,12 +331,12 @@ footer li img {
 
     .logo-area {
         order: -1;
-        min-height: 140px;
+        min-height: 130px;
     }
 
     .logo-area>img {
         display: block;
-        width: 180px;
+        width: 170px;
         height: auto;
     }
 
@@ -349,23 +349,22 @@ footer li img {
         font-size: 40px;
     }
 
-
     .conteudo-principal {
-        padding: 25px;
+        padding: 20px 20px 15px;
         text-align: center;
     }
 
     .conteudo-principal>p {
         font-size: 16px;
-        margin: 8px 0;
+        margin: 6px 0;
     }
 
     nav {
-        margin-top: 30px;
+        margin-top: 20px;
     }
 
     nav ul {
-        padding: 5px;
+        padding: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -374,9 +373,10 @@ footer li img {
     nav li {
         width: 100%;
         max-width: 400px;
-        margin-top: 10px;
+        margin-top: 8px;
         height: 40px;
         padding: 0.35rem;
+        grid-template-columns: 30px 1fr 22px;
     }
 
     nav li a {
@@ -385,46 +385,49 @@ footer li img {
         align-items: center;
         height: 100%;
         padding: 0;
-        font-size: 20px;
+        font-size: 18px;
+        white-space: nowrap;
     }
 
-    footer ul {
-        gap: 6px;
+    /* FOOTER */
+
+    .mensagem-footer {
+        gap: 2px;
     }
 
-    footer li img {
-        width: 16px;
-        height: 16px;
-    }
-
-    footer>p {
-        font-size: 12px;
-        margin: 5px;
-        padding: 0;
-    }
-
-    footer li a {
-        font-size: 16px;
-        padding: 5px;
+    .mensagem-footer>div {
+        gap: 3px;
     }
 
     .mensagem-footer p {
-        font-size: 15px;
-        margin: 4px;
+        font-size: 14px;
+        margin: 3px;
         padding: 0;
     }
 
     .mensagem-footer img {
-        width: 18px;
-        height: 18px;
+        width: 16px;
+        height: 16px;
     }
 
-}
+    footer ul {
+        gap: 5px;
+    }
 
-@media (prefers-reduced-motion: reduce) {
+    footer li img {
+        width: 15px;
+        height: 15px;
+        padding-right: 3px;
+    }
 
-    nav li,
-    .logo-area>img {
-        animation: none;
+    footer li a {
+        font-size: 15px;
+        padding: 3px;
+    }
+
+    footer>p {
+        font-size: 11px;
+        margin: 4px;
+        padding: 0;
     }
 }
